@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="CyberForge — a structured cybersecurity architecture, threat intelligence and OSINT learning platform." />
+  <title>CyberForge | Security Architecture Learning OS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">CF</span><div><strong>CyberForge</strong><small>Security Learning OS</small></div></div>
+      <nav>
+        <a class="nav-item active" href="#dashboard" data-view="dashboard">⌂ <span>Dashboard</span></a>
+        <a class="nav-item" href="#curriculum" data-view="curriculum">▦ <span>Curriculum</span></a>
+        <a class="nav-item" href="#news" data-view="news">◉ <span>News & Intel</span><b class="badge">12</b></a>
+        <a class="nav-item" href="#labs" data-view="labs">⌘ <span>Labs & Projects</span></a>
+        <a class="nav-item" href="#osint" data-view="osint">◎ <span>OSINT Track</span></a>
+        <a class="nav-item" href="#community" data-view="community">☷ <span>Community</span></a>
+        <a class="nav-item" href="#resources" data-view="resources">◇ <span>Resource Vault</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="ghost-btn" id="themeBtn">◐ <span>Toggle dark mode</span></button>
+        <div class="profile-mini"><div class="avatar">GK</div><div><strong>Gk</strong><small>Architect track</small></div><span>⚙</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn">☰</button>
+        <div class="search"><span>⌕</span><input id="globalSearch" placeholder="Search modules, frameworks, techniques…" /></div>
+        <div class="top-actions"><button class="icon-btn" title="Notifications">♢<i></i></button><button class="calendar-btn">＋ Schedule study</button><div class="avatar">GK</div></div>
+      </header>
+
+      <section class="view active" id="dashboard">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="eyebrow">PRINCIPAL ARCHITECT PATH · 20-YEAR FOUNDATION</div>
+            <h1>Build security systems.<br><em>Think like the adversary.</em></h1>
+            <p>A zero-to-principal learning environment spanning infrastructure, SOC engineering, enterprise architecture, threat intelligence, OSINT and future security technologies.</p>
+            <div class="hero-actions"><button class="primary" onclick="openView('curriculum')">Continue learning →</button><button class="secondary" onclick="openView('news')">Open intel desk</button></div>
+          </div>
+          <div class="streak-card"><span class="live-dot"></span><span>Learning streak</span><strong>14 days</strong><small>Best: 21 days</small><div class="week"><i></i><i></i><i></i><i></i><i></i><i></i><i class="today"></i></div></div>
+        </div>
+
+        <div class="section-head"><div><span class="eyebrow">COMMAND CENTER</span><h2>Your architecture readiness</h2></div><button class="link-btn" onclick="openView('curriculum')">View roadmap →</button></div>
+        <div class="metrics">
+          <div class="metric"><span>Overall proficiency</span><strong>18%</strong><div class="progress"><i style="width:18%"></i></div><small>Target: Principal Architect</small></div>
+          <div class="metric"><span>Modules completed</span><strong>11 <small>/ 64</small></strong><div class="spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>+3 this month</small></div>
+          <div class="metric"><span>Current phase</span><strong>Phase 2</strong><div class="phase-dot">● Core Security Operations</div><small>Next: Modern Enterprise Architecture</small></div>
+          <div class="metric"><span>Intel freshness</span><strong>8 min</strong><div class="fresh">● Feeds healthy</div><small>Last sync · 15:04 IST</small></div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="panel roadmap"><div class="panel-title"><div><span class="eyebrow">LEARNING ROADMAP</span><h3>Five-phase mastery</h3></div><span class="pill">11 / 64</span></div>
+            <div class="road-item done"><span class="phase">01</span><div><strong>Absolute Technical Foundations</strong><small>Networking · OS · Cloud · Scripting</small></div><b>100%</b></div>
+            <div class="road-item current"><span class="phase">02</span><div><strong>Security Operations & Detection</strong><small>SIEM · SOAR · UEBA · NDR · CTEM</small></div><b>32%</b></div>
+            <div class="road-item"><span class="phase">03</span><div><strong>Modern Enterprise Architecture</strong><small>ZTA · IAM · EDR/XDR · DevSecOps</small></div><b>0%</b></div>
+            <div class="road-item"><span class="phase">04</span><div><strong>Future-Proof Technologies</strong><small>AI · Crypto · Cloud-native · OT/IoT</small></div><b>0%</b></div>
+            <div class="road-item"><span class="phase">05</span><div><strong>Threat Intelligence & OSINT</strong><small>Collection · Analysis · Attribution · Ethics</small></div><b>0%</b></div>
+          </div>
+          <div class="panel"><div class="panel-title"><div><span class="eyebrow">TODAY'S INTELLIGENCE</span><h3>What changed</h3></div><button class="link-btn" onclick="openView('news')">View all</button></div>
+            <article class="intel"><span class="severity high">HIGH</span><div><strong>KEV watchlist</strong><p>Prioritize newly added exploited vulnerabilities before routine patch queues.</p><small>8 min ago · CISA KEV</small></div></article>
+            <article class="intel"><span class="severity med">MED</span><div><strong>ATT&CK change watch</strong><p>Review technique and software updates before refreshing detection mappings.</p><small>42 min ago · MITRE</small></div></article>
+            <article class="intel"><span class="severity info">INFO</span><div><strong>Architecture brief</strong><p>Identity-first segmentation remains the strongest cross-domain design primitive.</p><small>2 hr ago · Research desk</small></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="curriculum"><div class="page-head"><div><span class="eyebrow">MASTER CURRICULUM</span><h1>Security Architecture Roadmap</h1><p>64 modules · theory → architecture → lab → assessment</p></div><div class="filter-row"><button class="filter active">All</button><button class="filter">Foundations</button><button class="filter">Detection</button><button class="filter">Architecture</button></div></div><div id="curriculumList" class="curriculum-list"></div></section>
+
+      <section class="view" id="news"><div class="page-head"><div><span class="eyebrow">CONTINUOUS LEARNING ENGINE</span><h1>Daily News & Threat Intelligence</h1><p>Live-source dashboard for vulnerabilities, TTPs, research, acquisitions and regulation.</p></div><button class="primary" id="refreshNews">↻ Refresh feeds</button></div><div class="news-layout"><div><div class="news-tabs"><button class="active">All intelligence</button><button>Vulnerabilities</button><button>Threat actors</button><button>Research</button><button>Regulation</button></div><div id="newsFeed" class="feed"></div></div><aside class="source-panel panel"><span class="eyebrow">SOURCE HEALTH</span><h3>Core feed set</h3><div class="source"><i></i>CISA KEV Catalog <b>LIVE</b></div><div class="source"><i></i>MITRE ATT&CK <b>LIVE</b></div><div class="source"><i></i>NVD <b>LIVE</b></div><div class="source"><i></i>AlienVault OTX <b>LIVE</b></div><div class="source"><i></i>CyberWire Daily <b>RSS</b></div><div class="source"><i></i>SANS ISC StormCast <b>RSS</b></div><div class="source"><i></i>BleepingComputer <b>RSS</b></div><div class="source"><i></i>SecurityWeek <b>RSS</b></div><h4>Morning workflow</h4><p>06:30 — CVE/KEV triage<br>07:00 — actor/TTP delta<br>07:30 — research & regulation<br>08:00 — update detection backlog</p></aside></div></section>
+
+      <section class="view" id="labs"><div class="page-head"><div><span class="eyebrow">HANDS-ON ENGINEERING</span><h1>Labs & Architecture Projects</h1><p>Build artifacts that prove architectural depth.</p></div></div><div class="lab-grid"><div class="lab-card featured"><span>CAPSTONE</span><h3>Build a Mini SOC</h3><p>Deploy logs → SIEM → detection → SOAR → case management. Map every control to ATT&CK.</p><button class="primary">Start lab →</button></div><div class="lab-card"><span>NETWORK</span><h3>Packet-to-Detection</h3><p>Analyze DNS, TLS and flow telemetry, then write an investigation playbook.</p><button>Open brief</button></div><div class="lab-card"><span>IDENTITY</span><h3>Zero Trust Reference Build</h3><p>Design IdP, PAM, ZTNA and policy enforcement for a hybrid enterprise.</p><button>Open brief</button></div><div class="lab-card"><span>CLOUD</span><h3>Kubernetes Threat Model</h3><p>Model cluster attack paths and create preventive + detective controls.</p><button>Open brief</button></div></div></section>
+
+      <section class="view" id="osint"><div class="page-head"><div><span class="eyebrow">OSINT SPECIALIZATION</span><h1>Open Source Intelligence Track</h1><p>Investigate responsibly: collect, validate, correlate, document and communicate.</p></div></div><div class="osint-grid"><div class="skill-card"><span>01</span><h3>Network Reconnaissance</h3><p>DNS, WHOIS, certificate transparency, passive infrastructure mapping and safe collection boundaries.</p><div class="progress"><i style="width:38%"></i></div><small>38% · 4 lessons</small></div><div class="skill-card"><span>02</span><h3>Data Scraping</h3><p>Structured collection, rate limits, robots/policies, parsing, provenance and reproducibility.</p><div class="progress"><i style="width:14%"></i></div><small>14% · 5 lessons</small></div><div class="skill-card"><span>03</span><h3>Identity Verification</h3><p>Source triangulation, account linkage, confidence scoring and disinformation resistance.</p><div class="progress"><i style="width:22%"></i></div><small>22% · 5 lessons</small></div><div class="skill-card"><span>04</span><h3>Geolocation</h3><p>Image metadata, visual landmarks, maps, shadows, terrain and uncertainty documentation.</p><div class="progress"><i style="width:8%"></i></div><small>8% · 6 lessons</small></div><div class="skill-card"><span>05</span><h3>Social Media Analysis</h3><p>Public-source collection, timelines, network analysis and platform-specific evidence handling.</p><div class="progress"><i style="width:5%"></i></div><small>5% · 6 lessons</small></div><div class="skill-card"><span>06</span><h3>Legal & Ethical Practice</h3><p>Authorization, privacy, terms of service, data minimization, jurisdiction and evidence hygiene.</p><div class="progress"><i style="width:45%"></i></div><small>45% · 3 lessons</small></div></div></section>
+
+      <section class="view" id="community"><div class="page-head"><div><span class="eyebrow">COMMUNITY</span><h1>Peer & Expert Feedback</h1><p>Discuss architectures, publish lab write-ups and get review from practitioners.</p></div><button class="primary">＋ New discussion</button></div><div class="community-grid"><div class="panel discussions"><div class="panel-title"><h3>Active discussions</h3><span class="pill">24 new</span></div><div class="discussion"><span class="avatar">AR</span><div><strong>How should UEBA scores feed a SOC risk model?</strong><small>Architecture · 18 replies · 2h ago</small></div><b>▲ 42</b></div><div class="discussion"><span class="avatar">NS</span><div><strong>CTEM vs vulnerability management: where do you draw the boundary?</strong><small>Risk · 11 replies · 5h ago</small></div><b>▲ 31</b></div><div class="discussion"><span class="avatar">VM</span><div><strong>Practical ATT&CK mapping for identity detections</strong><small>Detection · 27 replies · yesterday</small></div><b>▲ 26</b></div></div><div class="panel"><span class="eyebrow">YOUR SKILL SCORE</span><h3>Architecture profile</h3><div class="skill-row"><span>Network security</span><b>34</b></div><div class="skill-row"><span>Detection engineering</span><b>28</b></div><div class="skill-row"><span>Cloud security</span><b>19</b></div><div class="skill-row"><span>Identity architecture</span><b>16</b></div><div class="skill-row"><span>Threat intelligence</span><b>11</b></div></div></div></section>
+
+      <section class="view" id="resources"><div class="page-head"><div><span class="eyebrow">RESOURCE VAULT</span><h1>Frameworks, Standards & Research</h1><p>Vendor-neutral anchors for every module.</p></div></div><div class="resource-grid"><a href="https://www.nist.gov/cyberframework" target="_blank">NIST CSF <small>Risk & governance</small></a><a href="https://attack.mitre.org/" target="_blank">MITRE ATT&CK <small>Adversary knowledge</small></a><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA KEV <small>Exploited vulnerabilities</small></a><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP <small>Application security</small></a><a href="https://www.rfc-editor.org/" target="_blank">RFC Editor <small>Internet standards</small></a><a href="https://cloudsecurityalliance.org/" target="_blank">Cloud Security Alliance <small>Cloud research</small></a><a href="https://www.sans.org/white-papers/" target="_blank">SANS White Papers <small>Practical research</small></a><a href="https://www.blackhat.com/" target="_blank">Black Hat <small>Technical talks</small></a></div></section>
+    </main>
+  </div>
+  <div class="toast" id="toast">Saved ✓</div>
+  <script src="app.js"></script>
+</body>
+</html>
